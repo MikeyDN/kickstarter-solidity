@@ -1,4 +1,7 @@
 {
+  "scripts": {
+    "test": "mocha"
+  },
   "dependencies": {
     "fs-extra": "^10.1.0",
     "ganache-cli": "^6.12.2",
