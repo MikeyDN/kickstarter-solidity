@@ -1,10 +1,9 @@
 // deploy code will go here
 const HDWalletProvider = require('@truffle/hdwallet-provider');
-const { interface, bytecode } = require("./compile.js");
 const Web3 = require("web3");
+const compiledFactory = require("./");
 
-menmonic = 'mnemonic';
-infuraLink = 'ifura rinkeby link';
+
 
 const provider = new HDWalletProvider(
   menmonic,
@@ -18,8 +17,8 @@ const deploy = async () => {
 
   console.log("Attempting to deploy from account", accounts[0]);
 
-  const result = await new web3.eth.Contract(JSON.parse(interface))
-    .deploy({ data: bytecode, arguments: ['Hi there!'] })
+  const result = await new web3.eth.Contract(abi)
+    .deploy({ data: evm.bytecode.object })
     .send({ gas: '1000000', from: accounts[0] });
 
   console.log('Contract deployed to', result.options.address);
