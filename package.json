@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "mocha"
+    "test": "mocha",
+    "dev": "next dev"
   },
   "dependencies": {
     "@truffle/hdwallet-provider": "^2.0.14",
