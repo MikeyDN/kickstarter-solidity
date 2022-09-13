@@ -24,3 +24,4 @@ for (let contract in output) {
 		output[contract]
 	);
 }
+// This is a complete boilerplate for compiling contracts to files.
