@@ -1,5 +1,32 @@
 body {
 	color: white;
-	background-color: black;
+	background-color: #585858;
 	font-family: consolas;
+}
+
+.ui.menu {
+	color: white;
+	background-color: #5e6262;
+}
+
+.ui.menu .item {
+	color: white;
+}
+
+.ui.form .field input {
+	color: white;
+	background-color: #5e6262;
+
+}
+.ui.form .field label {
+	color: white;
+
+}
+.ui.form input:focus {
+    color: rgba(0,0,0,.95);
+    border-color: #85b7d9;
+    border-radius: .28571429rem;
+    background: #5e6262;
+    -webkit-box-shadow: 0 0 0 0 rgba(34,36,38,.35) inset;
+    box-shadow: 0 0 0 0 rgba(34,36,38,.35) inset;
 }
