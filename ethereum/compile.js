@@ -6,6 +6,7 @@ const buildPath = path.resolve(__dirname, 'build');
 fs.removeSync(buildPath);
 
 const contractPath = path.resolve(__dirname, 'contract', 'Campaign.sol');
+console.log(contractPath);
 const source = fs.readFileSync(contractPath, 'utf8');
 const input = JSON.stringify({
 	language: 'Solidity',
@@ -14,7 +15,9 @@ const input = JSON.stringify({
 		outputSelection: { '*': { '*': ['*'] } }
 	}
 });
-const output = JSON.parse(solc.compile(input)).contracts['Campaign.sol'];
+
+const output = JSON.parse(solc.compile(input)).contracts;
+console.log(output)
 
 fs.ensureDirSync(buildPath);
 
