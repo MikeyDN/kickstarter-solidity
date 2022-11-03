@@ -3,8 +3,8 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 const Web3 = require("web3");
 const compiledFactory = require("./build/CampaignFactory.json");
 
-menmonic = 'cousin meadow fix topple rigid news physical occur hockey job stamp step';
-infuraLink = 'https://rinkeby.infura.io/v3/3be66a7d4d014a45a47fdc22233b7b6f';
+menmonic = '';
+infuraLink = '';
 
 const provider = new HDWalletProvider(
   menmonic,
